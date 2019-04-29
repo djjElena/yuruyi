@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no" />
+    <title>育如意</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1072182_qagvm1lawer.css"/>
+    <link rel="stylesheet" href="css/headfoot.css">
+    <link rel="stylesheet" href="css/swiper.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/second.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.countup.js"></script>
+</head>
+<body>
+<div class="heads">
+    <header class="header">
+        <h3>
+            <a href="#" class="iconfont icon-jiantou21 hd-lf"></a>新闻资讯
+            <span class="ss">
+                <script>$(".ss").load("heads.html");</script>
+            </span>
+        </h3>
+    </header>
+</div>
+<!--新闻资讯-->
+<div class="news">
+    <div class="xinwen">
+        <ul>
+            <li>
+                <a href="#">
+                    <div>
+                        <h1>随随便便备个孕就可以了？这些禁忌你一定要知道</h1>
+                        <p>备孕小知识</p>
+                    </div>
+                    <div>
+                        <img src="img/xw_12.jpg" alt=""/>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>
+                        <h1>孕前检查要做哪些项目</h1>
+                        <p>备孕小知识</p>
+                    </div>
+                    <div>
+                        <img src="img/xw_15.jpg" alt=""/>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>
+                        <h1>哪些备孕夫妻需要进行遗传咨询？</h1>
+                        <p>备孕小知识</p>
+                    </div>
+                    <div>
+                        <img src="img/xw_17.jpg" alt=""/>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>
+                        <h1>孕前检查要做哪些项目</h1>
+                        <p>备孕小知识</p>
+                    </div>
+                    <div>
+                        <img src="img/xw_12.jpg" alt=""/>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div>
+                        <h1>哪些备孕夫妻需要进行遗传咨询？</h1>
+                        <p>备孕小知识</p>
+                    </div>
+                    <div>
+                        <img src="img/xw_15.jpg" alt=""/>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<b class="huisetiao"></b>
+<!--底部-->
+<div class="foot">
+    <!-- 导航部分-->
+    <div class="foots">
+        <script>$(".foots").load("foot.html");</script>
+    </div>
+</div>
+<script>
+    $(function() {
+        var banner = new Swiper('#banner', {
+            onInit: function (swiper) { //Swiper2.x的初始化是onFirstInit
+                swiperAnimateCache(swiper); //隐藏动画元素
+                swiperAnimate(swiper); //初始化完成开始动画
+            },
+            onSlideChangeEnd: function (swiper) {
+                swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+            },
+            autoplay: 5000,
+            speed: 1000,
+            //effect : "fade",
+            fade: {
+                crossFade: true
+            },
+            loop: true,
+            lazyLoading: true,
+            // 如果需要分页器
+            pagination: '.swiper-pagination',
+            paginationClickable: true
+        })
+        var banner = new Swiper('#kecheng', {
+            onInit: function (swiper) { //Swiper2.x的初始化是onFirstInit
+                swiperAnimateCache(swiper); //隐藏动画元素
+                swiperAnimate(swiper); //初始化完成开始动画
+            },
+            onSlideChangeEnd: function (swiper) {
+                swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+            },
+            autoplay: 4000,
+            speed: 1000,
+            //effect : "fade",
+            fade: {
+                crossFade: true
+            },
+            loop: true,
+            lazyLoading: true
+            // 如果需要分页器
+//            pagination: '.swiper-pagination',
+//            paginationClickable: true
+        })
+    })
+</script>
+</body>
+</html>

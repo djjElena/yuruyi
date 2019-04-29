@@ -1,0 +1,76 @@
+<!-- 此头部为首页外的其他页面引用，首页头部特殊，代码写在首页html内部-->
+<div class="head">
+    <div class="head-phone">
+        <div class="head-logo lf">
+            <a href="#">
+                <span><img src="img/logo.png" alt=""/></span>
+            </a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="搜索课程"/>
+            <b></b>
+        </div>
+        <div class="top_cen rt">
+            <a href="javascript:;">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <a class="cen_x active" href="javascript:;">
+                ×
+            </a>
+        </div>
+        <ul class="navlist_mo">
+            <li>
+                <a href="#">首页</a>
+            </li>
+            <li class="mo">
+                <a>视频课程</a>
+            </li>
+            <li class="mo">
+                <a>音频课程</a>
+            </li>
+            <li class="mo">
+                <a>新书热卖</a>
+            </li>
+            <li class="mo">
+                <a>新闻资讯</a>
+            </li>
+        </ul>
+    </div>
+    <strong></strong>
+</div>
+<script>
+    $(function(){
+        //点击切换导航栏按钮  手机端
+        $('.head-phone').on('click','.top_cen a',function(){
+            if($(this).attr('class')!='active'){
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+            }else{
+                $(this).removeClass('active');
+                $(this).siblings().addClass('active');
+            }
+            if($(this).attr('class')!='cen_x active'){
+                $('body').css('right','50%');
+                $('.nav_bg').fadeIn();
+                $('.navlist_mo').css('right','0');
+            }else{
+                $('body').css('right','0');
+                $('.nav_bg').fadeOut();
+                $('.navlist_mo').css('right','-50%');
+            }
+        });
+        //侧边栏点击切换效果  手机端
+        $('.head-phone').on('click','.mo>a',function(){
+            if($(this).parent().attr('class')!='mo active'){
+                $(this).parent().addClass('active');
+                $(this).parent().siblings().removeClass('active');
+            }else{
+                $(this).parent().removeClass('active');
+            }
+        });
+
+    })
+</script>
+
